@@ -26,7 +26,7 @@ class Button extends StdClass {
 	}
 }
 
-$buttonList = [];
+$buttonList = array();
 
 function addToggleButtons($category, $linkOn, $linkOff) {
 	global $buttonList;
@@ -41,7 +41,7 @@ if (!file_exists('settings.ini')) {
 $settings = parse_ini_file("settings.ini", true);
 
 foreach ($settings as $category => $buttonData) {
-	addToggleButtons($category, $buttonData['on'], $buttonData['off']);
+	addToggleButtons($category, $buttonData[1], $buttonData[0]);
 }
 
 ?>
