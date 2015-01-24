@@ -1,0 +1,73 @@
+body {
+	background-color: #FFE4C4;
+}
+a {
+	text-decoration: none;
+	color: #000000;
+}
+h2 {
+	margin: 10px 0;
+}
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 770px;
+}
+.category {
+	max-width: 370px;
+	margin: 0 10px;
+	display: inline-block;
+}
+.category h2 {
+	margin: 0 15px; 
+	border-bottom: 1px solid #000000;
+}
+	.button {
+	border: 1px solid #000000;
+	width: 150px;
+	margin: 15px;
+	display: inline-block;
+	cursor: pointer;
+}
+.button span {
+	display: block;
+}
+.button-link {
+	padding: 10px;
+	font-family: Helvetica;
+}
+.orange {
+	background-color: #FF4500;
+}
+.green {
+	background-color: #9ACD32;
+}
+.blue {
+	background-color: #00FA9A;
+}
+.message {
+	border: 1px solid #000000;
+	font-size: 20px;
+	font-family: Verdana;
+	background-color: #ffffff;
+	position: absolute;
+	margin: 0 auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 25px;
+	width: 200px;
+	padding: 5px;
+	-webkit-box-shadow: 0px 0px 57px 12px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 57px 12px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 57px 12px rgba(0,0,0,0.75);
+}
+.message.hidden {
+	display: none;
+}
+
+@media screen and (max-width: 480px) {
+	.button-image {
+		display: none;
+	}
+}	
