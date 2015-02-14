@@ -48,26 +48,27 @@ foreach ($settings as $category => $buttonData) {
 
 <html>
 	<head>
-	<title>Home Control</title>
-    <LINK href="style.css" rel="stylesheet" type="text/css">
-    <script src="script.js"></script>
+		<title>Home Control</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	    <link href="style.css" rel="stylesheet" type="text/css">
+	    <script src="script.js"></script>
 	</head>
  	<body>
- 	<div class="message hidden" align="center" id="message"></div>
- 	<div class="container" align="center">
- 		<?php foreach ($buttonList as $category => $buttons) {
- 			$categoryParts = explode('_', $category);
- 			$categoryString = '';
- 			foreach ($categoryParts as $part) {
- 				$categoryString .= ' ' . ucfirst($part);
- 			}
+	 	<div class="container" align="center">
+	 	 	<div class="message hidden" align="center" id="message"></div>
+	 		<?php foreach ($buttonList as $category => $buttons) {
+	 			$categoryParts = explode('_', $category);
+	 			$categoryString = '';
+	 			foreach ($categoryParts as $part) {
+	 				$categoryString .= ' ' . ucfirst($part);
+	 			}
 
- 			echo '<div align="center" class="category"><h2>' . $categoryString . '</h2>';
- 			foreach ($buttons as $button) {
- 				echo $button->render();
- 			}
- 			echo '</div>';
- 		}?>
- 	</div>
+	 			echo '<div align="center" class="category"><h2>' . $categoryString . '</h2>';
+	 			foreach ($buttons as $button) {
+	 				echo $button->render();
+	 			}
+	 			echo '</div>';
+	 		}?>
+	 	</div>
  	</body>
 </html>
